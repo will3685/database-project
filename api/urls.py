@@ -7,4 +7,6 @@ urlpatterns = [
   path("userhost/", UserHostList.as_view()),
   path("userclient/<int:id>/", UserClientDetail.as_view()),
   path("userhost/<int:id>/", UserHostDetail.as_view()),
+  path("haircategory/", HairCategoryList.as_view()),
+  path("haircategory/<int:id>/", HairCategoryDetail.as_view()),
 ]

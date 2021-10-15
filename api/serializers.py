@@ -12,3 +12,8 @@ class UserHostSerializer(serializers.ModelSerializer):
   class Meta:
     model = UserHost
     fields = '__all__' 
+
+class HairCategorySerializer(serializers.ModelSerializer):
+  class Meta:
+    model = HairCategory
+    fields = '__all__'
