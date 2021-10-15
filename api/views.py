@@ -4,3 +4,4 @@ from django.shortcuts import render
 from .controllers.user_client_controller import *
 from .controllers.user_host_controller import *
 from .controllers.hair_category_controller import *
+from .controllers.hair_controller import *

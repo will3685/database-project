@@ -17,3 +17,8 @@ class HairCategorySerializer(serializers.ModelSerializer):
   class Meta:
     model = HairCategory
     fields = '__all__'
+  
+class HairSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Hair
+    fields = '__all__'
