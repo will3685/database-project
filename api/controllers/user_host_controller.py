@@ -6,10 +6,10 @@ from rest_framework.response import Response
 from api.models import *
 from api.serializers import *
 
-class UserClientList(APIView):
+class UserHostList(APIView):
   def get(self, request):
-      userclient = UserClient.objects.all()
-      data = UserClientSerializer(userclient, many=True).data
+      userhost = UserHost.objects.all()
+      data = UserHostSerializer(userhost, many=True).data
       return Response(data)
 
   def post(self, request):
@@ -21,15 +21,21 @@ class UserClientList(APIView):
       # userclient.save()
       # serializer = UserClientSerializer(userclient).data
 
-      serializer = UserClientSerializer(data=request.data)
+      serializer = UserHostSerializer(data=request.data)
       serializer.is_valid(raise_exception=True)
       serializer.save()
       return Response(serializer.data)
 
-class UserClientDetail(APIView):
+class UserHostDetail(APIView):
   def get(self,request, id):
-    userclient = get_object_or_404(UserClient, id=id)
-    serializer = UserClientSerializer(userclient).data
+    userhost = get_object_or_404(UserHost, id=id)
+    serializer = UserHostSerializer(userhost).data
+    return Response(serializer)
+
+class UniqueCategoryBookDetail(APIView):
+  def get(self,request, id):
+    userhost = get_object_or_404(UserHost, id=id)
+    serializer = UniqueCategoryBookSerializer(userhost).data
     return Response(serializer)
 
 

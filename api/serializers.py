@@ -7,3 +7,8 @@ class UserClientSerializer(serializers.ModelSerializer):
   class Meta:
     model = UserClient
     fields = '__all__'
+
+class UserHostSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = UserHost
+    fields = '__all__' 
