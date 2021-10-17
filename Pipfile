@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 gunicorn = "*"
+mysqlclient = "*"
+mysql-connector-python = "*"
+django-heroku = "*"
 
 [dev-packages]
 
